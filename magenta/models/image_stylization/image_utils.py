@@ -407,7 +407,6 @@ def load_np_image_uint8(image_file):
     f.flush()
     #image = scipy.misc.imread(f.name)
 	image = imageio.imread(f.name)
-	
     # Workaround for black-and-white images
     if image.ndim == 2:
       image = np.tile(image[:, :, None], (1, 1, 3))
